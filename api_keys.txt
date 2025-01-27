@@ -1,0 +1,4 @@
+openai.api_key = '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'
+aviationstack_api_key = '7cfedf3338f1454ab66f2e66e2501c49'
+openweather_api_key = '29bcd5d07d5fe8356dcfca7db35f1199'
+
