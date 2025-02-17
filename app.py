@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import openai
 import requests
@@ -5,7 +6,7 @@ import re
 from datetime import datetime, timedelta
 
 # Set up your API keys here
-openai.api_key = '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'                # Replace with your OpenAI API key
+openai.api_key = os.getenv("API_KEY")                # Replace with your OpenAI API key
 aviationstack_api_key = '7cfedf3338f1454ab66f2e66e2501c49'  # Replace with your AviationStack API key
 openweather_api_key = '29bcd5d07d5fe8356dcfca7db35f1199'      # Replace with your OpenWeatherMap API key
 
