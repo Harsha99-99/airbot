@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 import os
 import streamlit as st
 import openai
@@ -5,10 +6,10 @@ import requests
 import re
 from datetime import datetime, timedelta
 
-# Set up your API keys here
-openai.api_key = os.getenv("API_KEY")                # Replace with your OpenAI API key
-aviationstack_api_key = '7cfedf3338f1454ab66f2e66e2501c49'  # Replace with your AviationStack API key
-openweather_api_key = '29bcd5d07d5fe8356dcfca7db35f1199'      # Replace with your OpenWeatherMap API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
+aviationstack_api_key = os.getenv("AVIATIONSTACK_API_KEY")
+openweather_api_key = os.getenv("OPENWEATHER_API_KEY")
+
 
 # Initialize session state to keep track of conversation history
 if "messages" not in st.session_state:
