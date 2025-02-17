@@ -28,4 +28,4 @@ jobs:
           AVIATIONSTACK_API_KEY: ${{ secrets.AVIATIONSTACK_API_KEY }}
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
-          streamlit run your_app.py
+          streamlit run app.py
