@@ -6,7 +6,7 @@ import requests
 import re
 from datetime import datetime, timedelta
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("MY_SECRET_API_KEY")
 aviationstack_api_key = os.getenv("AVIATIONSTACK_API_KEY")
 openweather_api_key = os.getenv("OPENWEATHER_API_KEY")
 
