@@ -24,7 +24,7 @@ jobs:
 
       - name: Set up environment variables
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.MY_SECRET_API_KEY }}
           AVIATIONSTACK_API_KEY: ${{ secrets.AVIATIONSTACK_API_KEY }}
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
