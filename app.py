@@ -6,10 +6,23 @@ import requests
 import re
 from datetime import datetime, timedelta
 
-openai.api_key = os.getenv("MY_SECRET_API_KEY")
-aviationstack_api_key = os.getenv("AVIATIONSTACK_API_KEY")
-openweather_api_key = os.getenv("OPENWEATHER_API_KEY")
+# For OpenAI API
+if "MY_SECRET_API_KEY" in os.environ:
+    openai.api_key = os.getenv("MY_SECRET_API_KEY")
+else:
+    openai.api_key = st.secrets["MY_SECRET_API_KEY"]
 
+# For AviationStack API
+if "AVIATIONSTACK_API_KEY" in os.environ:
+    aviationstack_api_key = os.getenv("AVIATIONSTACK_API_KEY")
+else:
+    aviationstack_api_key = st.secrets["AVIATIONSTACK_API_KEY"]
+
+# For OpenWeather API
+if "OPENWEATHER_API_KEY" in os.environ:
+    openweather_api_key = os.getenv("OPENWEATHER_API_KEY")
+else:
+    openweather_api_key = st.secrets["OPENWEATHER_API_KEY"]
 
 # Initialize session state to keep track of conversation history
 if "messages" not in st.session_state:
